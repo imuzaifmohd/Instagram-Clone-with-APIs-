@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>Enter the photo link to update:</h1>
+    <form method="POST" action="http://localhost:8080/posts/<%= postix.id %>?_method=PATCH">
+        <textarea name="postSrc" id=""></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

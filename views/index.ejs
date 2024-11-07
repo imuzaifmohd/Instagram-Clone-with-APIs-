@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="/images/logo1.png" alt="Instagram">
+            <div class="left-side-options">Home</div>
+            <div class="left-side-options">Search</div>
+            <div class="left-side-options">Explore</div>
+            <div class="left-side-options">Reels</div>
+            <div class="left-side-options">Messages</div>
+            <div class="left-side-options">Notifications</div>
+            <div class="left-side-options">Create</div>
+            <div class="left-side-options">Profile</div>
+            <br><br>
+
+
+
+            <div class="left-side-options"><a href="http://localhost:8080/posts/new">Create a Post</a></div>
+
+
+
+
+
+            <div class="left-side-options" id="last-left-side-options">More</div>
+        </div>
+        <div class="right-side">
+
+            <!-- This is posts container div -->
+            <div class="posts-container-div">
+<img src="images/upperInsta.png" class="upperInsta" alt="Not Available">
+
+
+
+                <% for (post of posts) { %>
+
+
+
+
+
+                                    <!-- This is post div -->
+                <div class="post">
+
+                    <!-- This is starting of post upper div -->
+                    <div class="post-upper-div">
+                        
+                        <div class="profile-photo">
+                            <img src="<%= post.profilePicSrc %>" alt="Profile Photo">
+                        </div>
+                        <div class="username"><%= post.username %>
+                            <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a>
+                        </div>
+                        <div class="dot-dot-dot">
+                            <!-- <a href="">Delete Post</a> -->
+                            <form method="POST" action="http://localhost:8080/posts/<%= post.id %>?_method=DELETE">
+                                <!-- <button>Delete Post</button> -->
+                                <button style="background: none; text-decoration: underline; border: none; padding: 0; font: inherit; cursor: pointer;">Delete Post</button>
+                    
+                            </form>
+                        </div>
+                    
+                    <!-- This is ending of post upper div -->
+                    </div>
+
+
+                    <!-- This is starting of post middle div -->
+                    <div class="post-photo">
+                        <img src="<%= post.postSrc %>" alt="Photo Unavailable">
+                        
+                        <!-- This is ending of post middle div -->
+                    </div>
+
+
+                    <!-- This is starting of post-lower-div -->
+                    <div class="post-lower-div">
+
+                        <div class="likes-count-div"><%= post.likesCount %> likes</div>    
+
+                        <div class="caption-div">
+                            <span class="username-in-caption-span"><%= post.username %></span>
+                            <span class="caption-span"> &nbsp <%= post.caption %></span>
+                        </div>
+                        
+                        <div class="view-comments-div">View all <%= post.commentsCount %> comments</div>
+
+                        <div class="add-comment-div">Add a comment...</div>
+
+
+
+                        <!-- This is ending of post-lower-div -->
+                    </div>
+
+                    <br>
+                    <hr class="post-end-hr">
+                    <br>
+                <!-- This is ending of post div -->
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <% } %>
+
+
+
+
+
+
+
+
+
+                <!-- This is ending of posts container div -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

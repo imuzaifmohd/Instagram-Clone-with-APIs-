@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+img{
+    padding: 20px 0 20px 0;
+    height: 2rem;
+    width: 6.5rem;
+}
+
+.container{
+    display: flex;
+}
+
+.left-side{
+    background-color: lightblue;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    border-right: 1px solid #262626;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+
+.left-side img{
+    padding: 10px 0;
+}
+
+#last-left-side-options{
+    position: absolute;
+    bottom: 0;
+}
+
+.right-side{
+    /* overflow: scroll; */
+    flex: 1;
+    /* border: 2px solid lightpink; */
+    background-color: black;
+}
+
+
+.posts-container-div{
+    margin-left: 100px;
+    width: 400px;
+    /* border: 2px solid lightcoral; */
+
+}
+
+.upperInsta{
+    width: 130%;
+    height: 85px;
+    padding: 0;
+    position: relative;
+    right: 50px;
+}
+
+.post-upper-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo{
+    height: 2.42rem;
+    width: 2.42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img{
+    max-height: 2rem;
+    max-width: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.username{
+    flex: 1;
+    padding: 0 0 5px 5px;
+    position: relative;
+}
+
+.username a{
+    position: absolute;
+    right: 10px;
+}
+
+.dot-dot-dot{
+
+    padding: 0 5px 5px 5px;
+}
+
+.post-photo{
+    max-width: 468px;
+}
+
+.post-photo img{
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    padding: 0;
+}
+
+
+
+
+
+/* post lower div */
+
+
+.post-lower-div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.view-comments-div, .add-comment-div{
+    /* color: #a6a6a6dd; */
+    color: rgb(168, 168, 168);
+
+}
+
+.post-end-hr{
+    border: 1px solid #262626;
+}

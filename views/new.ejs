@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <style>
+        .flex-div{
+            display: flex;
+            align-items: center;
+        }
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter the details for making a new post:</h1>
+    <p>(Details other than profile picture and post's picture will be updated by the system)</p>
+    
+    <form method="POST" action="http://localhost:8080/posts/new">
+        <div class="flex-div">
+            <div>Give link of profile picture.</div>
+            <textarea name="profilePicSrc" id=""></textarea>
+        </div>
+        <br><br>
+        <div class="flex-div">
+            <div>Give link of post's picture.</div>
+            <textarea name="postSrc" id=""></textarea>
+        </div>
+        <br><br>
+        <button>Submut</button>
+    </form>
+</body>
+</html>

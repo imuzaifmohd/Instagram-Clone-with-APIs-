@@ -1,0 +1,26 @@
+1) used npm init -y to install package.json
+
+2) then installed express and started a server on 8080 port
+
+3) made a new folder views and public
+
+defined 
+// For public folder
+app.use(express.static(path.join(__dirname, "public")));
+
+// for views folder
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
+4) installed ejs
+
+
+
+
+
+
+
+x) while using online images they have padding automatically to them
+	so we can give them 0 padding
+y) we can use object-fit: cover; for an image
+
